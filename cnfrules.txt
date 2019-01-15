@@ -1,0 +1,9 @@
+if:(if A B):(or (not A) B)
+iff:(iff A B):(or (and A B) (and (not A) (not B)))
+demorgans:(not (or A B)):(and (not A) (not B))
+demorgans:(not (and A B)):(or (not A) (not B))
+double_neg:(not (not A)):A
+distribution:(or C (and A B)):(and (or A C) (or B C))
+distribution:(or (and A B) C):(and (or A C) (or B C))
+rewrite:(and A (and B C)):(and (and A B) C)
+rewrite:(or A (or B C)):(or (or A B) C)

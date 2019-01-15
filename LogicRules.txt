@@ -1,0 +1,24 @@
+Double_Negation:A:(not (not A))
+Association:(and A (and B C)):(and (and A B) C)
+Association:(or A (or B C)):(or (or A B) C)
+Commutation:(and A B):(and B A)
+Commutation:(or A B):(or B A)
+Idempotence_or:(or A A):A
+Idempotence_and:(and A A):A
+DeMorgan:(not (and A B)):(or (not A) (not B))
+DeMorgan:(not (or A B)):(and (not A) (not B))
+Distribution:(and A (or B C)):(or (and A B) (and A C))
+Distribution:(or A (and B C)): (and (or A B) (or A C))
+Absorption_and:(and A (or A B)):A
+Absorption_or:(or A (and A B)):A
+Reduction:(and A (or (not A) B)):(and A B)
+Reduction:(or A (and (not A) B)):(or A B)
+Contraposition:(if A B): (if (not B) (not A))
+Exportation:(if A (if B C)): (if (and A B) C)
+Commutation_iff:(iff A B):(iff B A)
+Association_iff:(iff A (iff B C)): (iff (iff A B) C)
+Implication:(if A B):(or (not A) B)
+Equivalence:(iff A B):(or (and A B) (and (not A) (not B)))
+Taut: (or P (not P)):TRUE
+Neg: (and P (not P)):FALSE
+Neg: (and (not P) P):FALSE
